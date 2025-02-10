@@ -94,8 +94,8 @@
 
   <div id="results">
     <h3>動画情報</h3>
-    <p><strong>タイトル:</strong> <span id="title"></span></p>
-    <p><strong>URL:</strong> <a id="stream-url" href="#" target="_blank">新しいタブで開く</a></p>
+    <p><strong>タイトル:</strong> <span id="videoTitle"></span></p>
+    <p><strong>URL:</strong> <a id="stream_url" href="#" target="_blank">新しいタブで開く</a></p>
     <video id="video-player" controls>
       <source id="video-source" type="video/mp4">
       お使いのブラウザは動画の再生をサポートしていません。
@@ -209,7 +209,7 @@
     }
 
     function displayResults(data) {
-      document.getElementById("title").textContent = data.title;
+      document.getElementById("videoTitle").textContent = data.title;
       const formatStreams = data.formatStreams || [];
       const streamUrl = formatStreams.length > 0 ? formatStreams[0].url : null;
       const streamLink = document.getElementById("stream_url");
