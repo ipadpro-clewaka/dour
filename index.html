@@ -209,7 +209,7 @@
     }
 
     function displayResults(data) {
-      document.getElementById("videoTitle").textContent = data.title;
+      document.getElementById("videoTitle").textContent = data.videoTitle;
       const formatStreams = data.formatStreams || [];
       const streamUrl = formatStreams.length > 0 ? formatStreams[0].url : null;
       const streamLink = document.getElementById("stream_url");
