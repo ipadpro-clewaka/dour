@@ -172,7 +172,7 @@
     }
 
     async function fetchVideoData(videoId) {
-      const apiUrl = `https://script.google.com/macros/s/AKfycbxYjOWULjin5kpp-NcjjjGujVX3wy1TEJVUR2AZtR6-5c_q7GBr1Nctl2_Kat4lSboD/exec?videoId=api/v1/videos/${videoId}`;
+      const apiUrl = `https://natural-voltaic-titanium.glitch.me/api/${videoId}`;
       overlay.style.display = "flex";
       try {
         const response = await fetch(apiUrl);
@@ -212,7 +212,7 @@
       document.getElementById("title").textContent = data.title;
       const formatStreams = data.formatStreams || [];
       const streamUrl = formatStreams.length > 0 ? formatStreams[0].url : null;
-      const streamLink = document.getElementById("stream-url");
+      const streamLink = document.getElementById("stream_url");
       const videoPlayer = document.getElementById("video-player");
       const videoSource = document.getElementById("video-source");
       
